@@ -7,13 +7,18 @@ const Header = () => {
     return (
         <div className='header-container'>
             <div className="header">
-                <div className='header-logo'>Xpenser <CgBox/> </div>
-            </div>
-            <div className="header-button">
-                <a href="/">
-                    <AiFillGithub/>
+                <div className='header-logo'>Xpenser <CgBox className='box-logo' /> </div>
+                <div className="header-button">
+                <a 
+                    href="https://github.com/SAIKUMAR124/expense-tracker"
+                    target='_blank'
+                    rel="noopener noreferrer"
+                >
+                    <AiFillGithub className='git-icon' />Star
                 </a>
             </div>
+            </div>
+            
         </div>
     )
 }
