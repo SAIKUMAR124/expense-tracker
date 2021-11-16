@@ -7,6 +7,7 @@ import { addExpense } from "../../redux/actions/expenses";
 import { BiPaperPlane } from "react-icons/bi";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import SuccessModal from "./success-modal";
 
 const AddForm = () => {
   const cat = categories;
@@ -59,6 +60,7 @@ const AddForm = () => {
         newestOnTop={false}
         closeOnClick
       />
+      <SuccessModal/>
       <div className="form-item">
         <label>Title</label>
         <input
