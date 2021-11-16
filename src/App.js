@@ -1,13 +1,18 @@
-import Header from './components/header';
-import Home from './pages/home';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Header from "./components/header";
+import AddExpense from "./pages/add-expense";
+import Home from "./pages/home";
 
 function App() {
   return (
-    <div>
-      <Header/>
-      <Home />
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/add-expense' component={AddExpense} />
+      </Switch>
       <div>Footer</div>
-    </div>
+    </BrowserRouter>
   );
 }
 
