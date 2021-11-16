@@ -1,10 +1,13 @@
 import React from 'react'
-import Topfold from '../../components/topfold'
+import AddForm from '../../components/add-form';
+import Topfold from '../../components/topfold';
+import './AddExpense.css'
 
 const AddExpense = () => {
     return (
-        <div>
+        <div className='add-expense'>
             <Topfold/>
+            <AddForm/>
         </div>
     )
 }
