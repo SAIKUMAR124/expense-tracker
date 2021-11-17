@@ -19,7 +19,7 @@ const SuccessModal = ({modalOpen, setModalOpen}) => {
   };
 
   return (
-    <Modal isOpen={modalOpen} style={customStyles}>
+    <Modal isOpen={modalOpen} style={customStyles} ariaHideApp={false} >
       <div className="modal-inner">
         <label>Expense Added Successfully</label>
         <img
