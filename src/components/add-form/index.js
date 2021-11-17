@@ -15,6 +15,7 @@ const AddForm = () => {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [category, setCategory] = useState();
+  const [modalOpen, setModalOpen] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -49,6 +50,7 @@ const AddForm = () => {
       createdAt: new Date(),
     };
     dispatch(addExpense(data));
+    setModalOpen(true);
   };
 
   return (
@@ -60,7 +62,7 @@ const AddForm = () => {
         newestOnTop={false}
         closeOnClick
       />
-      <SuccessModal/>
+      <SuccessModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <div className="form-item">
         <label>Title</label>
         <input
@@ -102,7 +104,7 @@ const AddForm = () => {
                     onClick={() => handleCategory(category)}
                   >
                     <label>{category.title}</label>
-                    <div>{category.icon}</div>
+                    <div className='cat-icons'>{category.icon}</div>
                   </div>
                 ))}
               </div>
