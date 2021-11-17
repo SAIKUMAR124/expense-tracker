@@ -1,0 +1,15 @@
+.expense-list{
+    margin: 6px 12px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 60vh;
+}
+
+.empty-list{
+    display: grid;
+    align-content: center;
+    text-align: center;
+    font-size: 4rem;
+    min-height: 60vh;
+}
