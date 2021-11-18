@@ -5,18 +5,21 @@ import { useDispatch } from 'react-redux';
 import { deleteExpense } from '../../redux/actions/expenses';
 import './Card.css';
 
-const Card = ({item}) => {
+const Card = ({item, notifySuccess}) => {
     const time = moment(item.createdAt).fromNow();
     const dispatch = useDispatch();
 
     const handleDelete =()=>{
-        dispatch(deleteExpense(item))
+        dispatch(deleteExpense(item));
+        notifySuccess();
     }
+
+    console.log(item.category.icon)
 
     return (
         <div className='card' style={{borderRight: `6px solid ${item.category.color}` }}>
             <div className='card-image-container'>
-                <i>{item.category.icon}</i>
+                {/* <i><{item.category.icon}/></i> */}
             </div>
             <div className='card-info'>
                 <label className='card-title'>{item.title}</label>

@@ -25,7 +25,7 @@ export const categories = [
   {
     id: 4,
     title: "Food",
-    icon: <MdFastfood />,
+    icon: <MdFastfood/>,
     color: "#FF9E6D",
   },
   {
