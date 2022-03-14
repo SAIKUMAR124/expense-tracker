@@ -16,5 +16,8 @@
 ### Search Item
 ![image](https://user-images.githubusercontent.com/36232014/158113201-92b82e6b-e2ba-4a07-95c3-86c7e68e80f2.png)
 
-### Search Item not present
+### Delete Item in the List
+![image](https://user-images.githubusercontent.com/36232014/158113846-c7138f00-4d56-421f-8c0c-c1f2db23a9c9.png)
+
+### Search Item not present or deleated all the items in the list
 ![image](https://user-images.githubusercontent.com/36232014/158113234-a00c4857-a83a-4a94-96fb-9748047a3dfe.png)
