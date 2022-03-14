@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import {AiOutlinePlusCircle, AiOutlineSearch} from 'react-icons/ai';
 import {BsChevronLeft} from 'react-icons/bs';
 import {MdOutlineCancel} from 'react-icons/md';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { searchExpense } from '../../redux/actions/expenses';
 import './Topfold.css';
 
 const Topfold = () => {
     const [query, setQuery] = useState('');
+    const dispatch = useDispatch();
 
     const handleQuery=(e)=>{
         setQuery(e.target.value);
+        dispatch(searchExpense(e.target.value))
     }
 
     return (

@@ -2,9 +2,9 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div>
-            
-        </div>
+        <footer style={{textAlign:'center'}}>
+            This is Expense Tracker
+        </footer>
     )
 }
 

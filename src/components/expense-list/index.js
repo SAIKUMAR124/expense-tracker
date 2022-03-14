@@ -6,10 +6,10 @@ import Card from "./Card";
 import "./ExpenseList.css";
 
 const ExpenseList = () => {
-  const { expenseList: list } = useSelector((state) => state.expenses);
-  const notifySuccess = ()=>toast.success('Expense Deleted')
+  const { expenseList: list, query } = useSelector((state) => state.expenses);
+  const notifySuccess = () => toast.success("Expense Deleted");
 
-  
+  const filterList = list.filter((item) => item.title.includes(query));
 
   return (
     <div className="expense-list">
@@ -20,9 +20,10 @@ const ExpenseList = () => {
         newestOnTop={false}
         closeOnClick
       />
-      {list.length ? (
-
-  list.map((item, index) => <Card item={item} notifySuccess={notifySuccess} key={index} />)
+      {filterList.length ? (
+        filterList.map((item, index) => (
+          <Card item={item} notifySuccess={notifySuccess} key={index} />
+        ))
       ) : (
         <div className="empty-list">
           <div>Empty list</div>
